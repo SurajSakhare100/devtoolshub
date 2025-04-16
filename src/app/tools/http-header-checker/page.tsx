@@ -109,7 +109,7 @@ export default function HttpHeaderChecker() {
       }
       
       // Process headers and identify missing security headers
-      const processedHeaders: HeaderInfo[] = data.headers.map((header: any) => {
+      const processedHeaders: HeaderInfo[] = data.headers.map((header: { name: string; value: string }) => {
         const name = header.name;
         return {
           name,
@@ -248,49 +248,6 @@ export default function HttpHeaderChecker() {
     if (activeTab === "cors") return header.isCors;
     return true;
   }) || [];
-
-  const isSecurityHeader = (name: string): boolean => {
-    const securityHeaders = [
-      "Strict-Transport-Security",
-      "Content-Security-Policy",
-      "X-Content-Type-Options",
-      "X-Frame-Options",
-      "X-XSS-Protection",
-      "Referrer-Policy",
-      "Permissions-Policy",
-    ];
-    return securityHeaders.some((header) => name.toLowerCase().includes(header.toLowerCase()));
-  };
-
-  const isCorsHeader = (name: string): boolean => {
-    const corsHeaders = [
-      "Access-Control-Allow-Origin",
-      "Access-Control-Allow-Methods",
-      "Access-Control-Allow-Headers",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-    ];
-    return corsHeaders.some((header) => name.toLowerCase().includes(header.toLowerCase()));
-  };
-
-  const getMissingSecurityHeaders = (): string[] => {
-    if (!headerData) return [];
-
-    const recommendedHeaders = [
-      "Strict-Transport-Security",
-      "Content-Security-Policy",
-      "X-Content-Type-Options",
-      "X-Frame-Options",
-      "X-XSS-Protection",
-      "Referrer-Policy",
-    ];
-
-    const existingHeaders = headerData.headers.map((header) => header.name.toLowerCase());
-    return recommendedHeaders.filter(
-      (header) => !existingHeaders.some((existing) => existing.includes(header.toLowerCase()))
-    );
-  };
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">

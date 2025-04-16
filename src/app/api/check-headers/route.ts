@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     // Validate URL
     try {
       new URL(url);
-    } catch (error) {
+    } catch {
       return NextResponse.json(
         { error: "Invalid URL format" },
         { status: 400 }

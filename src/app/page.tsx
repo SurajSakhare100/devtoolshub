@@ -150,7 +150,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Privacy Focused</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Your data stays on your device. We don't store or process your information on our servers.
+                Your data stays on your device. We don&apos;t store or process your information on our servers.
               </p>
             </div>
           </div>
