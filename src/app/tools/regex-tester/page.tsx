@@ -154,24 +154,59 @@ export default function RegexTester() {
 
     try {
       const regex = new RegExp(pattern, flags.join(""));
-      setIsValid(true);
-      setError("");
-      
       const results: MatchResult[] = [];
       let match;
+
+      // Reset state
+      setError("");
+      setMatches([]);
+      setHighlightedTestString(testString);
+
+      // Find all matches
       while ((match = regex.exec(testString)) !== null) {
         results.push(createMatchResult(match));
       }
-      
+
       setMatches(results);
-      highlightMatches(results);
+
+      // Highlight matches in the test string
+      if (results.length === 0) {
+        setHighlightedTestString(testString);
+        return;
+      }
+      
+      // Create a simple HTML representation with proper escaping
+      let html = "";
+      let lastIndex = 0;
+      
+      // Sort matches by index to process them in order
+      const sortedMatches = [...results].sort((a, b) => a.index - b.index);
+      
+      for (const result of sortedMatches) {
+        // Add text before the match
+        if (result.index > lastIndex) {
+          html += escapeHtml(testString.slice(lastIndex, result.index));
+        }
+        
+        // Add the highlighted match
+        html += `<span class="bg-yellow-200 dark:bg-yellow-800">${escapeHtml(result.match)}</span>`;
+        
+        lastIndex = result.index + result.match.length;
+      }
+      
+      // Add any remaining text
+      if (lastIndex < testString.length) {
+        html += escapeHtml(testString.slice(lastIndex));
+      }
+      
+      setHighlightedTestString(html);
     } catch (err) {
       setIsValid(false);
       setError(err instanceof Error ? err.message : "Invalid regex pattern");
       setMatches([]);
       setHighlightedTestString(testString);
     }
-  }, [pattern, testString, flags, highlightMatches]);
+  }, [pattern, testString, flags]);
 
   // Create a match result object
   const createMatchResult = (match: RegExpExecArray): MatchResult => {
@@ -202,41 +237,6 @@ export default function RegexTester() {
       groups,
       groupIndices,
     };
-  };
-
-  // Highlight matches in the test string
-  const highlightMatches = (results: MatchResult[]) => {
-    if (results.length === 0) {
-      setHighlightedTestString(testString);
-      return;
-    }
-    
-    // Create a simple HTML representation with proper escaping
-    let html = "";
-    let lastIndex = 0;
-    
-    // Sort matches by index to process them in order
-    const sortedMatches = [...results].sort((a, b) => a.index - b.index);
-    
-    for (const result of sortedMatches) {
-      // Add text before the match
-      if (result.index > lastIndex) {
-        html += escapeHtml(testString.substring(lastIndex, result.index));
-      }
-      
-      // Add the match with highlighting
-      html += `<span class="bg-yellow-200 dark:bg-yellow-800">${escapeHtml(result.match)}</span>`;
-      
-      // Update lastIndex
-      lastIndex = result.index + result.match.length;
-    }
-    
-    // Add any remaining text
-    if (lastIndex < testString.length) {
-      html += escapeHtml(testString.substring(lastIndex));
-    }
-    
-    setHighlightedTestString(html);
   };
 
   // Escape HTML special characters

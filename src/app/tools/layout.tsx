@@ -1,5 +1,4 @@
 "use client";
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 // Declare the adsbygoogle type
@@ -16,13 +15,11 @@ export default function ToolsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-
   useEffect(() => {
     // Load AdSense script only on client side
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({
-        push: function (config: Record<string, unknown>): void {
+        push: function (): void {
           throw new Error("Function not implemented.");
         }
       });
