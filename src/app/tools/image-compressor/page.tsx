@@ -66,7 +66,7 @@ export default function ImageCompressor() {
     setError("");
     
     try {
-      const img = new Image(0, 0);
+      const img = new window.Image();
       img.onload = () => {
         const canvas = document.createElement("canvas");
         const ctx = canvas.getContext("2d");
