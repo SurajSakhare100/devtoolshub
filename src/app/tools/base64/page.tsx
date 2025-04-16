@@ -292,7 +292,7 @@ export default function Base64Tool() {
         <h3 className="text-lg font-medium text-blue-800 dark:text-blue-300 mb-2">About Base64 Encoding</h3>
         <p className="text-blue-700 dark:text-blue-200">
           Base64 is a binary-to-text encoding scheme that represents binary data in ASCII string format.
-          It's commonly used to encode binary data like images or files into text that can be safely transmitted over text-based protocols.
+          It&apos;s commonly used to encode binary data like images or files into text that can be safely transmitted over text-based protocols.
           This tool allows you to encode text or files to Base64 and decode Base64 strings back to their original form.
         </p>
       </div>

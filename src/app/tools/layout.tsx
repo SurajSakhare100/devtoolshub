@@ -21,7 +21,11 @@ export default function ToolsLayout({
   useEffect(() => {
     // Load AdSense script only on client side
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      (window.adsbygoogle = window.adsbygoogle || []).push({
+        push: function (config: Record<string, unknown>): void {
+          throw new Error("Function not implemented.");
+        }
+      });
     } catch (err) {
       console.error("Error loading AdSense:", err);
     }

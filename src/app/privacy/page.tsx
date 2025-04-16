@@ -70,14 +70,14 @@ export default function PrivacyPage() {
             We may employ third-party companies and individuals to facilitate our Service, provide the Service on our behalf, or assist us in analyzing how our Service is used. These third parties have access to your personal information only to perform these tasks on our behalf.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Children&apos;s Privacy</h2>
           <p>
             Our Service is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">8. Changes to This Privacy Policy</h2>
           <p>
-            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">9. Contact Us</h2>

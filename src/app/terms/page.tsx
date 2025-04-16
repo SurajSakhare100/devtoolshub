@@ -16,7 +16,7 @@ export default function TermsPage() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">1. Acceptance of Terms</h2>
           <p>
-            By accessing and using DevToolsHub ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this Service.
+            By accessing and using DevToolsHub (&quot;the Service&quot;), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this Service.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">2. Use License</h2>
@@ -28,12 +28,12 @@ export default function TermsPage() {
             <li>Use the materials for any commercial purpose</li>
             <li>Attempt to decompile or reverse engineer any software contained on DevToolsHub</li>
             <li>Remove any copyright or other proprietary notations from the materials</li>
-            <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+            <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server</li>
           </ul>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">3. Disclaimer</h2>
           <p>
-            The materials on DevToolsHub are provided on an 'as is' basis. DevToolsHub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+            The materials on DevToolsHub are provided on an &quot;as is&quot; basis. DevToolsHub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">4. Limitations</h2>
@@ -48,7 +48,7 @@ export default function TermsPage() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">6. Links</h2>
           <p>
-            DevToolsHub has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by DevToolsHub of the site. Use of any such linked website is at the user's own risk.
+            DevToolsHub has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by DevToolsHub of the site. Use of any such linked website is at the user&apos;s own risk.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Modifications</h2>
