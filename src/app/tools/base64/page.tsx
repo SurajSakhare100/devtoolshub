@@ -80,7 +80,7 @@ export default function Base64Tool() {
           toast.success("Text decoded successfully", {
             description: "Your Base64 string has been decoded",
           });
-        } catch (e) {
+        } catch {
           const errorMessage = "Invalid Base64 string. Please check your input.";
           setError(errorMessage);
           toast.error("Decoding Failed", {

@@ -1,20 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { 
-  Code, 
   Image, 
-  FileText, 
-  Globe, 
   Hash, 
   Search,
   FileJson,
-  FileCode,
-  FileImage,
-  FileType,
-  FileArchive,
-  FileVideo,
-  FileAudio,
-  FileSpreadsheet,
   File,
 } from "lucide-react";
 

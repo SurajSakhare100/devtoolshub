@@ -68,7 +68,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold">Join Our Community</h3>
             </div>
             <p>
-              We're always looking for contributors and feedback to improve our tools. Whether you're a developer, designer, or user, we'd love to hear from you. Visit our GitHub repository or contact us to get involved.
+              We&apos;re always looking for contributors and feedback to improve our tools. Whether you&apos;re a developer, designer, or user, we&apos;d love to hear from you. Visit our GitHub repository or contact us to get involved.
             </p>
           </div>
           

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { toast } from "sonner";
+import Image from "next/image";
 
 type CompressionLevel = "high" | "medium" | "low";
 type ImageFormat = "jpeg" | "png" | "webp";
@@ -222,7 +223,7 @@ export default function ImageCompressor() {
             <div>
               <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Original Image</h3>
               <div className="border border-gray-200 dark:border-gray-700 rounded-md overflow-hidden">
-                <img src={originalImage} alt="Original" className="max-w-full h-auto" />
+                <Image src={originalImage} alt="Original" width={500} height={500} className="max-w-full h-auto" />
               </div>
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                 Size: {formatFileSize(originalSize)}
@@ -233,7 +234,7 @@ export default function ImageCompressor() {
               <div>
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Compressed Image</h3>
                 <div className="border border-gray-200 dark:border-gray-700 rounded-md overflow-hidden">
-                  <img src={compressedImage} alt="Compressed" className="max-w-full h-auto" />
+                  <Image src={compressedImage} alt="Compressed" width={500} height={500} className="max-w-full h-auto" />
                 </div>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   Size: {formatFileSize(compressedSize)}

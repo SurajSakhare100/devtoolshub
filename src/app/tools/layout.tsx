@@ -1,12 +1,13 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 // Declare the adsbygoogle type
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: Array<{
+      push: (config: Record<string, unknown>) => void;
+    }>;
   }
 }
 

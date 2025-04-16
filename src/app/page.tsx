@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code, FileJson, Image, Globe, Hash, Search, Shield } from "lucide-react";
+import { Code, FileJson, Image, Globe, Hash, Search, Shield, ArrowRight, Code2, FileText, FileCode, FileImage, FileType, FileArchive, FileVideo, FileAudio, FileSpreadsheet } from "lucide-react";
 
 export default function Home() {
   return (
@@ -69,7 +69,7 @@ export default function Home() {
             <Link href="/tools/image-compressor" className="group bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all p-6 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg mr-4">
-                  <Image className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                  <Image className="h-6 w-6 text-purple-600 dark:text-purple-400" alt="Image compression icon" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Image Compressor</h3>
               </div>

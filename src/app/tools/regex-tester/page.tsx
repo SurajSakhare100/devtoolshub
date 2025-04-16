@@ -153,30 +153,17 @@ export default function RegexTester() {
     }
 
     try {
-      // Always use the global flag for finding all matches
-      const regex = new RegExp(pattern, flags.join("") + "g");
+      const regex = new RegExp(pattern, flags.join(""));
       setIsValid(true);
       setError("");
       
-      // Find all matches
       const results: MatchResult[] = [];
       let match;
-      
-      // Reset regex for each search
-      regex.lastIndex = 0;
-      
       while ((match = regex.exec(testString)) !== null) {
         results.push(createMatchResult(match));
-        
-        // Prevent infinite loop for zero-length matches
-        if (match.index === regex.lastIndex) {
-          regex.lastIndex++;
-        }
       }
       
       setMatches(results);
-      
-      // Highlight matches in the test string
       highlightMatches(results);
     } catch (err) {
       setIsValid(false);
@@ -184,7 +171,7 @@ export default function RegexTester() {
       setMatches([]);
       setHighlightedTestString(testString);
     }
-  }, [pattern, testString, flags]);
+  }, [pattern, testString, flags, highlightMatches]);
 
   // Create a match result object
   const createMatchResult = (match: RegExpExecArray): MatchResult => {
