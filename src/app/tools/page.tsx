@@ -49,13 +49,6 @@ const tools = [
     href: "/tools/http-header-checker",
     category: "Web Development"
   },
-  {
-    name: "Regex Tester",
-    description: "Test and debug regular expressions",
-    icon: File,
-    href: "/tools/regex-tester",
-    category: "Development"
-  }
 ];
 
 export default function ToolsPage() {

@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevToolsHub - Developer Tools Dashboard",
   description: "A comprehensive dashboard of developer tools including Sitemap Generator, JSON Formatter, and more.",
+  icons:"/favicon.ico",
   keywords: "developer tools, sitemap generator, json formatter, web development, SEO tools",
   authors: [{ name: "DevToolsHub" }],
   openGraph: {
@@ -46,7 +47,11 @@ export default function RootLayout({
       <head>
       <meta name="google-adsense-account" content="ca-pub-7623182087547549"/>
       <meta name="google-site-verification" content="b7yDmUftzFJzjwP96Jv0AQ6E3alSjSkx7felqcdVwqs" />
-<Script async src="https://www.googletagmanager.com/gtag/js?id=G-B6XNVFN1V1"></Script>
+      <link rel="canonical" href="https://devstoolhub.vercel.app" />
+      <meta    name="keywords"
+          content="developer tools, sitemap generator, json formatter, web development, SEO tools"
+      />
+<Script  async src="https://www.googletagmanager.com/gtag/js?id=G-B6XNVFN1V1"></Script>
 <Script dangerouslySetInnerHTML={{
   __html: `
     window.dataLayer = window.dataLayer || [];
