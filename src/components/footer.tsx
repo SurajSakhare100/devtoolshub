@@ -4,7 +4,7 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-900 border-t dark:border-gray-800">
-      <div className="container mx-auto px-4 py-12">
+      <div className="max-w-7xl  mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">DevToolsHub</h3>
@@ -67,11 +67,7 @@ export function Footer() {
                   HTTP Header Checker
                 </Link>
               </li>
-              <li>
-                <Link href="/tools/regex-tester" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                  Regex Tester
-                </Link>
-              </li>
+              
             </ul>
           </div>
           
@@ -88,11 +84,7 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                  Blog
-                </Link>
-              </li>
+             
               <li>
                 <Link href="/privacy" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                   Privacy Policy

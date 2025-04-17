@@ -27,7 +27,7 @@ export default function Home() {
       </section>
 
       {/* Tools Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 max-w-7xl mx-auto bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Developer Tools</h2>
@@ -93,19 +93,7 @@ export default function Home() {
               <span className="text-blue-600 dark:text-blue-400 group-hover:underline">Learn more →</span>
             </Link>
 
-            {/* Regex Tester */}
-            <Link href="/tools/regex-tester" className="group bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-red-100 dark:bg-red-900 rounded-lg mr-4">
-                  <Search className="h-6 w-6 text-red-600 dark:text-red-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Regex Tester</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Test and debug regular expressions with real-time validation and highlighting.
-              </p>
-              <span className="text-blue-600 dark:text-blue-400 group-hover:underline">Learn more →</span>
-            </Link>
+            
 
             {/* HTTP Header Checker */}
             <Link href="/tools/http-header-checker" className="group bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all p-6 border border-gray-200 dark:border-gray-700">

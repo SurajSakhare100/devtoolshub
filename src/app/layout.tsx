@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Navbar } from "@/components/ui/navbar";
-
+import { Analytics } from "@vercel/analytics/react"
+import { Footer } from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DevToolsHub - Developer Tools Dashboard",
     description: "A comprehensive dashboard of developer tools including Sitemap Generator, JSON Formatter, and more.",
-    url: "https://devtoolshub.com",
+    url: "https://devstoolhub.vercel.app",
     siteName: "DevToolsHub",
     locale: "en_US",
     type: "website",
@@ -61,6 +62,9 @@ export default function RootLayout({
         <div className="pt-16">
           {children}
         </div>
+        <Footer/>
+
+        <Analytics />
         <Toaster richColors position="top-right" />
       </body>
     </html>
