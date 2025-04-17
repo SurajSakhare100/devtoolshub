@@ -52,7 +52,7 @@ export default function RootLayout({
           content="developer tools, sitemap generator, json formatter, web development, SEO tools"
       />
 <Script  async src="https://www.googletagmanager.com/gtag/js?id=G-B6XNVFN1V1"></Script>
-<Script dangerouslySetInnerHTML={{
+<Script id="gtag-init" dangerouslySetInnerHTML={{
   __html: `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
