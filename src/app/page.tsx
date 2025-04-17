@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {  FileJson, Globe, Hash, Search, Shield, ImageIcon } from "lucide-react";
+import {  FileJson, Globe, Hash, Shield, ImageIcon } from "lucide-react";
 
 export default function Home() {
   return (

@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import { Navbar } from "@/components/ui/navbar";
 import { Analytics } from "@vercel/analytics/react"
 import { Footer } from "@/components/footer";
+import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,8 +46,8 @@ export default function RootLayout({
       <head>
       <meta name="google-adsense-account" content="ca-pub-7623182087547549"/>
       <meta name="google-site-verification" content="b7yDmUftzFJzjwP96Jv0AQ6E3alSjSkx7felqcdVwqs" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6XNVFN1V1"></script>
-<script dangerouslySetInnerHTML={{
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-B6XNVFN1V1"></Script>
+<Script dangerouslySetInnerHTML={{
   __html: `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
